@@ -33,7 +33,7 @@ class _MainFoodPage extends State<MainFoodPage> {
                     Icon(Icons.home, size: 50),
                     SizedBox(width: 10,),
                     Column(children: [
-                        BigText(text: 'text', color: AppColors.mainColor, size: 30,),
+                        Text('Los Angeles', style: TextStyle(fontSize: 20),),
                         Text('User Location'),
                       ]),
                 ],
@@ -49,6 +49,16 @@ class _MainFoodPage extends State<MainFoodPage> {
                 )
               ],
       ))),
+      bottomNavigationBar: BottomNavigationBar(
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home_outlined), label: "home"),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.star), label: 'favorites'),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.local_grocery_store), label: 'supermarket_car')
+        ],
+      ),
     );
   }
 }
